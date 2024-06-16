@@ -1,6 +1,6 @@
 component:
   rds:
-    source: berbyte/rds
+    source: berbyte/aws/rds
     version: 0.0.1
 
     multi_az: true

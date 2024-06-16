@@ -1,6 +1,6 @@
 component:
   redis:
-    source: berbyte/redis
+    source: berbyte/aws/redis
     version: 0.0.1
 
     engine_version: 7.1

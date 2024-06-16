@@ -1,6 +1,6 @@
 component:
   iam:
-    source: berbyte/iam
+    source: berbyte/aws/iam
     version: 0.0.1
 
     permissions:

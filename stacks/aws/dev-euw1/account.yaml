@@ -1,4 +1,6 @@
 component:
   account:
+    source: berbyte/aws/account
+    version: 0.0.1
     id: 637423626552
     alias: dev-euw1

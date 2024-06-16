@@ -1,6 +1,6 @@
 component:
   kms:
-    source: berbyte/kms
+    source: berbyte/aws/kms
     version: 0.0.1
 
     aliases:
