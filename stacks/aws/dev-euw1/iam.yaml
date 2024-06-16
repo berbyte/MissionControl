@@ -1,16 +1,15 @@
 apiVersion: component.berbyte.sh/v1beta1
-component:
-  iam:
-    type: terraform
-    source: berbyte/aws/iam
-    version: 0.0.1
+iam:
+  type: terraform
+  source: berbyte/aws/iam
+  version: 0.0.1
 
-    permissions:
-      PlatformOwner:
-        - arn:aws:iam::aws:policy/AdministratorAccess
-      ApplicationOwner:
-        - arn:aws:iam::aws:policy/AdministratorAccess
-      ApplicationDeveloper:
-        - arn:aws:iam::aws:policy/PowerUserAccess
-      ReadOnly:
-        - arn:aws:iam::aws:policy/job-function/ViewOnlyAccess
+  permissions:
+    PlatformOwner:
+      - arn:aws:iam::aws:policy/AdministratorAccess
+    ApplicationOwner:
+      - arn:aws:iam::aws:policy/AdministratorAccess
+    ApplicationDeveloper:
+      - arn:aws:iam::aws:policy/PowerUserAccess
+    ReadOnly:
+      - arn:aws:iam::aws:policy/job-function/ViewOnlyAccess

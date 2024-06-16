@@ -1,8 +1,7 @@
 apiVersion: component.berbyte.sh/v1beta1
-component:
-  account:
-    type: terraform
-    source: berbyte/aws/account
-    version: 0.0.1
-    id: 637423626552
-    alias: dev-euw1
+account:
+  type: terraform
+  source: berbyte/aws/account
+  version: 0.0.1
+  id: 637423626552
+  alias: dev-euw1

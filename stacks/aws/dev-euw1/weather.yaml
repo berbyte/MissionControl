@@ -1,11 +1,10 @@
 apiVersion: component.berbyte.sh/v1beta1
-component:
-  weather:
-    type: terraform
-    source: components/weather
+weather:
+  type: terraform
+  source: ./components/weather
 
-    location: New York
-    options: 0T
-    format: v2
-    lang: en
-    units: m
+  location: New York
+  options: 0T
+  format: v2
+  lang: en
+  units: m

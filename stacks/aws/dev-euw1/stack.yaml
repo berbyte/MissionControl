@@ -1,0 +1,8 @@
+apiVersion: stack.berbyte.sh/v1beta1
+dev-euw1:
+  provider: aws
+  region: eu-west-1
+  environment: dev
+  tags:
+    demo: 1
+    beta: 1
