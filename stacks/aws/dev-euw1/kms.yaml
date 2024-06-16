@@ -1,0 +1,27 @@
+component:
+  kms:
+    source: berbyte/kms
+    version: 0.0.1
+
+    aliases:
+      - foo
+      - bar
+
+    permissions:
+      PlatformOwner:
+        - Encrypt
+        - Decrypt
+        - ReEncrypt
+        - GenerateDataKey
+        - DescribeKey
+      ApplicationOwner:
+        - Encrypt
+        - Decrypt
+        - ReEncrypt
+        - GenerateDataKey
+        - DescribeKey
+      ApplicationDeveloper:
+        - Encrypt
+        - DescribeKey
+      ReadOnly:
+        - DescribeKet

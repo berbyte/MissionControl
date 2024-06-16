@@ -1,0 +1,17 @@
+component:
+  rds:
+    source: berbyte/rds
+    version: 0.0.1
+
+    multi_az: true
+    subnet_ids: "{{ vpc.database_subnets }}"
+    instance_class: db.t4g.xlarge
+    engine: postgres
+    engine_version: 14.10
+    family: postgres14
+    db_name: "mwsdev"
+    username: data.sops_file.secrets_dev.data["rds_master_username"]
+    password: data.sops_file.secrets_dev.data["rds_master_password"]
+    snapshot_identifier: null
+    replica_count: 2
+    allocated_storage: 100

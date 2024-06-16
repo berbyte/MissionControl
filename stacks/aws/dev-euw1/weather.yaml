@@ -1,0 +1,9 @@
+component:
+  weather:
+    source: components/weather
+
+    location: New York
+    options: 0T
+    format: v2
+    lang: en
+    units: m

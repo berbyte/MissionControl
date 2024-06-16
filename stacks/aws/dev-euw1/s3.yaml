@@ -1,0 +1,10 @@
+component:
+  first_bucket:
+    source: terraform-aws-modules/s3-bucket/aws"
+    version: 4.1.2
+    force_destroy: true
+
+  second_bucket:
+    source: terraform-aws-modules/s3-bucket/aws"
+    version: 4.1.2
+    force_destroy: false

@@ -1,0 +1,12 @@
+component:
+  redis:
+    source: berbyte/redis
+    version: 0.0.1
+
+    engine_version: 7.1
+
+    vpc_id: "{{ vpc.vpc_id }}"
+    private_subnets: "{{ vpc.private_subnets }}"
+
+    shards: 1
+    instance_type: cache.t2.small
