@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    creationTimestamp: null
+    name: strapi
+    namespace: strapi
+data:
+    APP_KEYS: ENC[AES256_GCM,data:iHFv0s3HzegmUWWtCgFsUs2Z/Y0YyTQ6PSdY9mXU=,iv:/jgg6vZ8b4l7zaa5T9uex5aBacfjCHOdbXVJRBsJWR8=,tag:lQ0umD8EFJMXydL8FsFqAA==,type:str]
+    ADMIN_JWT_SECRET: ENC[AES256_GCM,data:4FbXenuteetX2wdqnUsUkdc=,iv:fkpDsy9ydf22tX3v0lepR7Qbf8+M9Kvm97AdhN/i9vQ=,tag:M9O9HnJNRZkHpchOCTVI2A==,type:str]
+    JWT_SECRET: ENC[AES256_GCM,data:vdBfqbfDzWeC1dc9m5IPy1oW5sEpOcDhcv6EAzTjqzsQ=,iv:i5gJmoQAJzXz6vEBfP+SPfyTt4bQhVetVk6lHd4V3dE=,tag:wrtrz7yfJu0/x9PgefRNxA==,type:str]
+    API_TOKEN_SALT: ENC[AES256_GCM,data:exEEH/Nsz0Ad3OqGMcADMzHovNELap24qUu2gCg3KAoqa7OpjTDZXTlVgWLh0JuTouDL0H1o=,tag:FoyL416hLCULbsp3Lf3uiA==,type:str]
+    DATABASE_CLIENT: ENC[AES256_GCM,data:rzyjRNLgRF47smDw,iv:+QFrlHCGbWsi1tnLIX+Uf2U58oTU=,tag:LOTzBz5t10kHdVtOPcqp9Q==,type:str]
+    DATABASE_HOST: ENC[AES256_GCM,data:LKO997NMZRAzunErSk0IDzFCcP8a48Iidfsk44hqQKEAe2Zl8Rpfvg==,iv:HW6VsnsiIRHXLqyiwuGF3/Y7bLMYcEQjzPVOIjg0efE=,tag:opC5Ne6nyvP1oUVxsFBiNA==,type:str]
+    DATABASE_PORT: ENC[AES256_GCM,data:s/t2GbXZkbM=,iv:vf++bLe3yyi5DburMm8nA0CPg=,tag:snTlIc0uTIR467PowEynEw==,type:str]
+    DATABASE_NAME: ENC[AES256_GCM,data:exbcbyB/iaUdwqMR5Hmtow=pI9j39F80=,tag:V/O/nKgv7TILIhjcf9BFfQ==,type:str]
+    DATABASE_USERNAME: ENC[AES256_GCM,data:xDQw7g6NI1MnqcJHUTTisFGjRR+nXpIBq7q6Y8Pq+ceDG6sugoZlVW0IAE=,tag:/cxlcQpP4EN3ifbSaODXSw==,type:str]
+    DATABASE_PASSWORD: ENC[AES256_GCM,data:5xFsgv1MAbsduASWx1FWpGQKu6uiD+GBnBJbXdN0F39Bb9o/lyVuWoD0ixmF4013z59J19l++rw=,tag:Qo0RJl4KxaF1OMGYLTDP/g==,type:str]
+sops:
+    kms:
+        - arn: arn:aws:kms:eu-west-1:6666:key/b441506
+          created_at: "2024-04-30T13:32:56Z"
+          enc: AQICAHgWk6+sr4RnU5aHGQFtkZByFml7Sb/K2EYFLZt0AAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM8fp03xVcMgscYQcFAgEQgDvVJlV9zDKZXAlmm6B3NEZ/4sRbKm/FAEHyVheFa0phzCSh3ZzVkoMfGK9X1TZnSldk/T8TtfWh6IXMaw==
+          aws_profile: ""
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2024-04-30T13:32:56Z"
+    mac: ENC[AES256_GCM,data:bPUFOvNub7IoqzVTl6ojs1cGcx2zje7G+8FY1CV9MWmHxzxNp0Le/dfq1mvieSBCKoXDSZvlsEX9+R7kq8qSDrz8YzzHVruV97aL3Qabc9cBKO4II337OiMhvdY=,iv:GsWnF3LfyGFOastRqsOqg7eInWHSm8ApCzWQlhW+S1s=,tag:NOIZL2+py+IDjHJOnnwrmA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.8.1

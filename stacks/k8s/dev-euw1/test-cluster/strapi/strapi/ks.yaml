@@ -1,0 +1,22 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: &app strapi
+  namespace: flux-system
+  labels:
+    substitution.flux.mws.workloads: "true"
+spec:
+  targetNamespace: strapi
+  commonMetadata:
+    labels:
+      app.kubernetes.io/name: *app
+  path: ./clusters/mws-dev-gc9m/apps/strapi/strapi/app
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: mws-k8s-workloads
+  wait: false
+  interval: 30m
+  retryInterval: 1m
+  timeout: 5m
