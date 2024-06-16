@@ -1,5 +1,6 @@
 component:
   redis:
+    type: terraform
     source: berbyte/aws/redis
     version: 0.0.1
 

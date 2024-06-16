@@ -1,5 +1,6 @@
 component:
   kms:
+    type: terraform
     source: berbyte/aws/kms
     version: 0.0.1
 

@@ -1,5 +1,6 @@
 component:
   iam:
+    type: terraform
     source: berbyte/aws/iam
     version: 0.0.1
 

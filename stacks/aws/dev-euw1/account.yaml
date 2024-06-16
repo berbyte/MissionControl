@@ -1,5 +1,6 @@
 component:
   account:
+    type: terraform
     source: berbyte/aws/account
     version: 0.0.1
     id: 637423626552

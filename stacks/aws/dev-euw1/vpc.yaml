@@ -1,5 +1,6 @@
 component:
   vpc:
+    type: terraform
     source: berbyte/aws/vpc
     version: 0.0.1
 

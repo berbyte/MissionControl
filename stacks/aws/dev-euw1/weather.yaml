@@ -1,5 +1,6 @@
 component:
   weather:
+    type: terraform
     source: components/weather
 
     location: New York
