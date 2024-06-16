@@ -6,11 +6,6 @@ output "url" {
   value = local.url
 }
 
-output "stage" {
-  value       = var.stage
-  description = "Stage where it was deployed"
-}
-
 output "location" {
   value       = var.location
   description = "Location of the weather report."

@@ -1,8 +1,3 @@
-variable "stage" {
-  description = "Stage where it will be deployed"
-  type        = string
-}
-
 variable "location" {
   description = "Location for which the weather."
   type        = string
