@@ -1,11 +1,15 @@
 apiVersion: component.berbyte.sh/v1beta1
-first_bucket:
-  type: terraform
-  source: terraform-aws-modules/s3-bucket/aws"
-  version: 4.1.2
-  force_destroy: true
+kind: terraform
 
-second_bucket:
-  source: terraform-aws-modules/s3-bucket/aws"
-  version: 4.1.2
-  force_destroy: false
+spec:
+  first_bucket:
+    source: terraform-aws-modules/s3-bucket/aws
+    version: 4.1.2
+    force_destroy: true
+
+  second_bucket:
+    source: terraform-aws-modules/s3-bucket/aws
+    version: 4.1.2
+    force_destroy: false
+    tags:
+      cluster_access: test_cluster

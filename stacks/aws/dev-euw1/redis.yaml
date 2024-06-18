@@ -1,13 +1,15 @@
 apiVersion: component.berbyte.sh/v1beta1
-redis:
-  type: terraform
-  source: berbyte/aws/redis
-  version: 0.0.1
+kind: terraform
 
-  engine_version: 7.1
+spec:
+  redis:
+    source: berbyte/aws/redis
+    version: 0.0.1
 
-  vpc_id: "{{ vpc.vpc_id }}"
-  private_subnets: "{{ vpc.private_subnets }}"
+    engine_version: 7.1
 
-  shards: 1
-  instance_type: cache.t2.small
+    vpc_id: "{{ vpc.vpc_id }}"
+    private_subnets: "{{ vpc.private_subnets }}"
+
+    shards: 1
+    instance_type: cache.t2.small

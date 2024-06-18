@@ -1,37 +1,39 @@
 apiVersion: component.berbyte.sh/v1beta1
-iam:
-  type: terraform
-  source: berbyte/aws/iam
-  version: 0.0.1
+kind: terraform
 
-  password_policy:
-    minimum_password_length: 10
-    max_password_age: 30
-    allow_users_to_change_password: true
-    require_lowercase_characters: true
-    require_numbers: true
-    require_uppercase_characters: true
-    require_symbols: true
-    password_reuse_prevention: 24
+spec:
+  iam:
+    source: berbyte/aws/iam
+    version: 0.0.1
 
-  permissions:
-    PlatformOwner:
-      - arn:aws:iam::aws:policy/job-function/ViewOnlyAccess
-    ApplicationOwner:
-      - arn:aws:iam::aws:policy/job-function/ViewOnlyAccess
-    ApplicationDeveloper:
-      - arn:aws:iam::aws:policy/job-function/ViewOnlyAccess
-    ReadOnly:
-      - arn:aws:iam::aws:policy/job-function/ViewOnlyAccess
+    password_policy:
+      minimum_password_length: 10
+      max_password_age: 30
+      allow_users_to_change_password: true
+      require_lowercase_characters: true
+      require_numbers: true
+      require_uppercase_characters: true
+      require_symbols: true
+      password_reuse_prevention: 24
 
-  users:
-    nandor.sivok:
-      email: dominis@berbyte.com
-      github: dominis
-      groups:
-        - PlatformOwner
-    marius.rugan:
-      email: mr@berbyte.com
-      github: mariusrugan
-      groups:
-        - PlatformOwner
+    permissions:
+      PlatformOwner:
+        - arn:aws:iam::aws:policy/job-function/ViewOnlyAccess
+      ApplicationOwner:
+        - arn:aws:iam::aws:policy/job-function/ViewOnlyAccess
+      ApplicationDeveloper:
+        - arn:aws:iam::aws:policy/job-function/ViewOnlyAccess
+      ReadOnly:
+        - arn:aws:iam::aws:policy/job-function/ViewOnlyAccess
+
+    users:
+      nandor.sivok:
+        email: dominis@berbyte.com
+        github: dominis
+        groups:
+          - PlatformOwner
+      marius.rugan:
+        email: mr@berbyte.com
+        github: mariusrugan
+        groups:
+          - PlatformOwner

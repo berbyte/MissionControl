@@ -1,28 +1,30 @@
 apiVersion: component.berbyte.sh/v1beta1
-kms:
-  type: terraform
-  source: berbyte/aws/kms
-  version: 0.0.1
+kind: terraform
 
-  aliases:
-    - foo
-    - bar
+spec:
+  kms:
+    source: berbyte/aws/kms
+    version: 0.0.1
 
-  permissions:
-    PlatformOwner:
-      - Encrypt
-      - Decrypt
-      - ReEncrypt
-      - GenerateDataKey
-      - DescribeKey
-    ApplicationOwner:
-      - Encrypt
-      - Decrypt
-      - ReEncrypt
-      - GenerateDataKey
-      - DescribeKey
-    ApplicationDeveloper:
-      - Encrypt
-      - DescribeKey
-    ReadOnly:
-      - DescribeKet
+    aliases:
+      - foo
+      - bar
+
+    permissions:
+      PlatformOwner:
+        - Encrypt
+        - Decrypt
+        - ReEncrypt
+        - GenerateDataKey
+        - DescribeKey
+      ApplicationOwner:
+        - Encrypt
+        - Decrypt
+        - ReEncrypt
+        - GenerateDataKey
+        - DescribeKey
+      ApplicationDeveloper:
+        - Encrypt
+        - DescribeKey
+      ReadOnly:
+        - DescribeKet

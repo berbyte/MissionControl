@@ -1,54 +1,57 @@
 apiVersion: component.berbyte.sh/v1beta1
-test_cluster:
-  type: terraform
-  source: berbyte/aws/eks
-  version: 0.0.1
+kind: terraform
 
-  cluster_version: 1.29
+spec:
+  eks:
+    source: berbyte/aws/eks
+    version: 0.0.1
 
-  vpc_id: "{{ vpc.vpc_id }}"
-  private_subnets: "{{ vpc.private_subnets }}"
-  public_subnets: "{{ vpc.public_subnets }}"
+    cluster_version: 1.29
 
-  kms_arn: "{{ kms.arn }}"
+    vpc_id: "{{ vpc.vpc_id }}"
+    private_subnets: "{{ vpc.private_subnets }}"
+    public_subnets: "{{ vpc.public_subnets }}"
 
-  nodepools:
-    - control:
-        instance_type: t2.medium
-        max_size: 5
-        min_size: 1
-        disk_size: 30
-        capacity_type: ON_DEMAND
-        taints:
-          key: CriticalAddonsOnly
-          value: true
-          effect: NO_SCHEDULE
-    - services:
-        instance_type: t2.medium
-        max_size: 5
-        min_size: 1
-        capacity_type: SPOT
+    kms_arn: "{{ kms.arn }}"
 
-permissions:
-  PlatformOwner:
-    - arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy
-  ApplicationOwner:
-    - arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy
-  ApplicationDeveloper:
-    - arn:aws:eks::aws:cluster-access-policy/AmazonEKSEditPolicy
-  ReadOnly:
-    - arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy
+    nodepools:
+      - control:
+          instance_type: t2.medium
+          max_size: 5
+          min_size: 1
+          disk_size: 30
+          capacity_type: ON_DEMAND
+          taints:
+            key: CriticalAddonsOnly
+            value: true
+            effect: NO_SCHEDULE
+      - services:
+          instance_type: t2.medium
+          max_size: 5
+          min_size: 1
+          capacity_type: SPOT
 
-plugins:
-  aws-load-balancer-controller:
-    version: 1.5.3
-  cluster-autoscaler:
-    version: 9.26.0
-  descheduler:
-    version: 0.28.0
-  metrics-server:
-    version: 3.12.0
-  reloader:
-    version: 1.0.51
-  external-dns:
-    version: 1.14.4
+    permissions:
+      PlatformOwner:
+        - arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy
+      ApplicationOwner:
+        - arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy
+      ApplicationDeveloper:
+        - arn:aws:eks::aws:cluster-access-policy/AmazonEKSEditPolicy
+      ReadOnly:
+        - arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy
+
+    plugins:
+      aws-load-balancer-controller:
+        version: 1.5.3
+      cluster-autoscaler:
+        version: 9.26.0
+      descheduler:
+        version: 0.28.0
+      metrics-server:
+        version: 3.12.0
+      reloader:
+        version: 1.0.51
+      external-dns:
+        version: 1.14.4
+        acm_arn: "{{ acm.arn }}"
