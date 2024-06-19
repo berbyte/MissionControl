@@ -2,6 +2,7 @@ apiVersion: component.berbyte.sh/v1beta1
 kind: helm
 
 spec:
+  source: ./lib/charts/strapi
   image: xxx
   ingressAnnotations:
     alb.ingress.kubernetes.io/group.name: "${CLUSTER_NAME}-public"
