@@ -3,16 +3,4 @@ kind: terraform
 
 spec:
   rds:
-    source: berbyte/aws/rds
-    version: 0.0.1
-
-    multi_az: true
-    subnet_ids: "{{ vpc.database_subnets }}"
-    instance_class: db.t4g.large
-    engine: postgres
-    engine_version: 14.10
-    family: postgres14
-    db_name: "ber"
-    snapshot_identifier: null
-    replica_count: 2
-    allocated_storage: 100
+    create: false

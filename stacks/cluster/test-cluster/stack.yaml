@@ -1,0 +1,7 @@
+apiVersion: stack.berbyte.sh/v1beta1
+kind: k8s
+
+spec:
+  cluster: "{{ eks.cluster_name }}"
+  components:
+    - strapi

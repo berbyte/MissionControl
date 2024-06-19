@@ -5,6 +5,16 @@ spec:
   dev-euw1:
     region: eu-west-1
     environment: dev
+    id: 637423626552
+    account_alias: ber-dev-euw1
     tags:
       demo: 1
       beta: 1
+    components:
+      - vpc
+      - kms
+      - acm
+      - s3
+      - eks
+      - rds
+      - redis
