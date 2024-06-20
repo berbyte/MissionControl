@@ -11,10 +11,7 @@ spec:
       demo: 1
       beta: 1
     components:
-      - vpc
-      - kms
-      - acm
-      - s3
-      - eks
-      - rds
-      - redis
+      terraform:
+        - vpc
+        - kms
+        - eks
