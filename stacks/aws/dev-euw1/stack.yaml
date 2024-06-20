@@ -8,8 +8,9 @@ spec:
     id: 637423626552
     account_alias: ber-dev-euw1
     tags:
-      demo: 1
-      beta: 1
+      environment: dev
+      stack: dev-euw1
+      cost_center: 123456
     components:
       - iam
       - rds
