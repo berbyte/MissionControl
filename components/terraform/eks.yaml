@@ -6,6 +6,7 @@ spec:
     source: berbyte/aws/eks
     version: 0.0.1
 
+    name: ber-cluster
     cluster_version: 1.29
 
     vpc_id: "{{ vpc.vpc_id }}"

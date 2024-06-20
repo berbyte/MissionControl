@@ -1,0 +1,21 @@
+apiVersion: component.berbyte.sh/v1beta1
+kind: terraform
+
+spec:
+  eks:
+    nodepools:
+      - control:
+          instance_type: t2.medium
+          max_size: 10
+          min_size: 1
+          disk_size: 30
+          capacity_type: ON_DEMAND
+          taints:
+            key: CriticalAddonsOnly
+            value: true
+            effect: NO_SCHEDULE
+      - services:
+          instance_type: t2.medium
+          max_size: 10
+          min_size: 1
+          capacity_type: SPOT

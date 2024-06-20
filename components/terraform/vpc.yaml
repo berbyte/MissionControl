@@ -6,10 +6,12 @@ spec:
     source: berbyte/aws/vpc
     version: 0.0.1
 
+    name: ber-vpc
+
     cidr: 10.0.0.0/16
     private_subnets:
       - 10.0.16.0/20
       - 10.0.32.0/20
       - 10.0.48.0/20
-    enable_nat_gw: true
+    enable_nat_gw: false
     enable_vpn_gateway: false
