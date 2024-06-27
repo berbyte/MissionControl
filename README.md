@@ -29,6 +29,11 @@ __Stacks__ are a collection of componenets defining a deployment. Supported type
 
 ## CLI commands:
 
+Init new project:
+```
+ber init
+```
+
 Create new stack:
 ```
 ber stack create --name dev-euw1 --type aws
@@ -58,5 +63,14 @@ ber stack attach-component --name my_first_vpc --stack dev-euw1
 Validator
 ```
 ber validate
+```
+
+
+Cloud
+```
+ber cloud login
+ber cloud setup
+ber cloud deploy
+...
 ```
 
