@@ -3,6 +3,8 @@ kind: aws
 
 spec:
   dev-euw1:
+    owner: stackdemo+deveuw1@ber.sh
+    budget: 200
     region: eu-west-1
     environment: dev
     id: 637423626552
